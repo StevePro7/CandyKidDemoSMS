@@ -102,6 +102,9 @@
     <ClCompile Include="screen\none_screen.c">
       <Filter>Source Files\screen</Filter>
     </ClCompile>
+    <ClCompile Include="screen\title_screen.c">
+      <Filter>Source Files\screen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="build.bat">
@@ -164,6 +167,9 @@
       <Filter>Header Files\screen</Filter>
     </ClInclude>
     <ClInclude Include="screen\none_screen.h">
+      <Filter>Header Files\screen</Filter>
+    </ClInclude>
+    <ClInclude Include="screen\title_screen.h">
       <Filter>Header Files\screen</Filter>
     </ClInclude>
   </ItemGroup>
