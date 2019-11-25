@@ -10,10 +10,10 @@ void main( void )
 {
 	// Global variables.
 	static bool global_pause;
-	unsigned char open_screen_type;
+	//unsigned char open_screen_type;
 
 	devkit_SMS_init();
-	devkit_SMS_setSpritePaletteColor( 0, 3, 0, 0 );
+	devkit_SMS_setSpritePaletteColor( 0, 0, 0, 3 );
 	devkit_SMS_displayOn();
 
 	for( ;; )
