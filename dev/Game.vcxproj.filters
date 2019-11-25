@@ -57,27 +57,6 @@
     <ClCompile Include="psg.c">
       <Filter>Source Files\output</Filter>
     </ClCompile>
-    <ClCompile Include="engine\asm_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\content_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\font_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\input_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\screen_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\tile_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\player_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="build.bat">
@@ -102,27 +81,6 @@
     </ClInclude>
     <ClInclude Include="psg.h">
       <Filter>Header Files\output</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\asm_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\content_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\font_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\input_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\screen_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\tile_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\player_manager.h">
-      <Filter>Header Files\engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
