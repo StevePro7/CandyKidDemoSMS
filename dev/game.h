@@ -8,9 +8,9 @@
 #define verMin		0
 #define dateYear	2019
 #define dateMonth	12
-#define dateDay		7
+#define dateDay		6
 #define author		"Steven Boland"
-#define name		"Hello World"
-#define descr		"Simple Sega Master System demo to run on real hardware!"
+#define name		"Candy Kid Demo"
+#define descr		"Candy Kid Demo to run on real hardware!"
 
 #endif//_GAME_H_
