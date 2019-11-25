@@ -148,7 +148,10 @@
     <ClCompile Include="devkit\_snd_manager.c" />
     <ClCompile Include="engine\asm_manager.c" />
     <ClCompile Include="engine\content_manager.c" />
+    <ClCompile Include="engine\enum_manager.c" />
     <ClCompile Include="engine\font_manager.c" />
+    <ClCompile Include="engine\global_manager.c" />
+    <ClCompile Include="engine\hack_manager.c" />
     <ClCompile Include="engine\input_manager.c" />
     <ClCompile Include="engine\player_manager.c" />
     <ClCompile Include="engine\screen_manager.c" />
@@ -156,6 +159,7 @@
     <ClCompile Include="game.c" />
     <ClCompile Include="gfx.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="object\hack_object.c" />
     <ClCompile Include="psg.c" />
   </ItemGroup>
   <ItemGroup>
@@ -166,7 +170,10 @@
     <ClInclude Include="devkit\_snd_manager.h" />
     <ClInclude Include="engine\asm_manager.h" />
     <ClInclude Include="engine\content_manager.h" />
+    <ClInclude Include="engine\enum_manager.h" />
     <ClInclude Include="engine\font_manager.h" />
+    <ClInclude Include="engine\global_manager.h" />
+    <ClInclude Include="engine\hack_manager.h" />
     <ClInclude Include="engine\input_manager.h" />
     <ClInclude Include="engine\player_manager.h" />
     <ClInclude Include="engine\screen_manager.h" />
@@ -174,6 +181,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="gfx.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="object\hack_object.h" />
     <ClInclude Include="psg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
