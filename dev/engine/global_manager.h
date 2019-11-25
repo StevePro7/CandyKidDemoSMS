@@ -1,6 +1,8 @@
 #ifndef _GLOBAL_MANAGER_H_
 #define _GLOBAL_MANAGER_H_
 
+#define MAX_SCREEENS		1	//5
+
 // Content.
 #define MUSIC_PSG			music_psg
 #define SOUND1_PSG			sound1_psg

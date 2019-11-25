@@ -3,10 +3,10 @@ H 9 areas 3 global symbols
 M screen_manager
 O -mz80
 S .__.ABS. Def0000
-A _CODE size 2 flags 0 addr 0
+A _CODE size F flags 0 addr 0
 S _engine_screen_manager_init Def0000
-S _engine_screen_manager_update Def0001
-A _DATA size 0 flags 0 addr 0
+S _engine_screen_manager_update Def000E
+A _DATA size 6 flags 0 addr 0
 A _INITIALIZED size 0 flags 0 addr 0
 A _DABS size 0 flags 8 addr 0
 A _HOME size 0 flags 0 addr 0
@@ -15,10 +15,26 @@ A _GSFINAL size 0 flags 0 addr 0
 A _INITIALIZER size 0 flags 0 addr 0
 A _CABS size 0 flags 8 addr 0
 T 00 00
+R 00 00 01 00
+T 00 00
+R 00 00 01 00
+T 02 00
+R 00 00 01 00
+T 02 00
+R 00 00 01 00
+T 04 00
+R 00 00 01 00
+T 04 00
+R 00 00 01 00
+T 05 00
+R 00 00 01 00
+T 05 00
+R 00 00 01 00
+T 00 00
 R 00 00 00 00
-T 00 00 C9
+T 00 00 21 04 00 36 00 21 02 00 39 7E 32 05 00 C9
+R 00 00 00 00 00 03 01 00 00 0D 01 00
+T 0E 00
 R 00 00 00 00
-T 01 00
-R 00 00 00 00
-T 01 00 C9
+T 0E 00 C9
 R 00 00 00 00
