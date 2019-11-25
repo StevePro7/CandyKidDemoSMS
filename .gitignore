@@ -12,6 +12,7 @@ bld/
 
 *dev/.vs/*
 *dev/*db
+*dev/*user
 
 # Prerequisites
 *.d
