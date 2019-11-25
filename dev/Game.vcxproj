@@ -161,6 +161,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="object\hack_object.c" />
     <ClCompile Include="psg.c" />
+    <ClCompile Include="screen\none_screen.c" />
     <ClCompile Include="screen\start_screen.c" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +185,7 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="object\hack_object.h" />
     <ClInclude Include="psg.h" />
+    <ClInclude Include="screen\none_screen.h" />
     <ClInclude Include="screen\start_screen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
