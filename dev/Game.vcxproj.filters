@@ -19,6 +19,24 @@
     <Filter Include="Source Files\devkit">
       <UniqueIdentifier>{f148aff4-06ab-469a-9d2a-cf52e99900e0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\engine">
+      <UniqueIdentifier>{1be31f48-5c0f-4a9b-9f9e-523d88703058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\screen">
+      <UniqueIdentifier>{02795d77-3c45-4b9b-8c06-a3c0f2676dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{10b12b8c-8725-42c5-948c-255ef353cf76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\screen">
+      <UniqueIdentifier>{2d6c0c95-05c2-4ab9-9ec4-d740594455d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\output">
+      <UniqueIdentifier>{ae850675-61b4-43ad-9bf8-7090344f3a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\output">
+      <UniqueIdentifier>{f0358522-eea7-470b-9c63-1633c36cfa8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -32,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="game.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gfx.c">
+      <Filter>Source Files\output</Filter>
+    </ClCompile>
+    <ClCompile Include="psg.c">
+      <Filter>Source Files\output</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +75,12 @@
     </ClInclude>
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gfx.h">
+      <Filter>Header Files\output</Filter>
+    </ClInclude>
+    <ClInclude Include="psg.h">
+      <Filter>Header Files\output</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

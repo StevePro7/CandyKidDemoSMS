@@ -41,7 +41,10 @@ sdcc -o output.ihx --Werror --opt-code-speed -mz80 --no-std-crt0 --data-loc 0xC0
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel ^
 devkit\_sms_manager.rel ^
-devkit\_snd_manager.rel
+devkit\_snd_manager.rel ^
+gfx.rel ^
+psg.rel
+
 
 :: Execute
 ihx2sms output.ihx output.sms

@@ -147,7 +147,9 @@
     <ClCompile Include="devkit\_sms_manager.c" />
     <ClCompile Include="devkit\_snd_manager.c" />
     <ClCompile Include="game.c" />
+    <ClCompile Include="gfx.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="psg.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="build.bat" />
@@ -156,7 +158,9 @@
     <ClInclude Include="devkit\_sms_manager.h" />
     <ClInclude Include="devkit\_snd_manager.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gfx.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="psg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
