@@ -12,12 +12,22 @@ void main( void )
 	static bool global_pause;
 	//unsigned char open_screen_type;
 
-	devkit_SMS_init();
-	devkit_SMS_setSpritePaletteColor( 0, 0, 0, 3 );
-	devkit_SMS_displayOn();
+	/*devkit_SMS_init();
+	devkit_SMS_displayOff();
+
+	devkit_SMS_setSpriteMode( devkit_SPRITEMODE_NORMAL() );
+	devkit_SMS_useFirstHalfTilesforSprites_False();
+	devkit_SMS_VDPturnOnFeature( devkit_VDPFEATURE_HIDEFIRSTCOL() );
+
+	engine_asm_manager_clear_VRAM();
+	engine_content_manager_load_tiles();
+	engine_content_manager_load_sprites();
+	engine_screen_manager_init();
+
+	devkit_SMS_displayOn();*/
 
 	for( ;; )
 	{
-		devkit_SMS_waitForVBlank();
+		//devkit_SMS_waitForVBlank();
 	}
 }

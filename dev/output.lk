@@ -1,0 +1,21 @@
+-mjwx
+-i output.ihx
+-b _CODE = 0x0200
+-b _DATA = 0xc000
+-k C:\Program Files\SDCC\bin\..\lib\z80
+-l ..\lib\SMSlib.lib
+-l z80
+..\crt0\crt0_sms.rel
+main.rel
+..\lib\PSGlib.rel
+engine\asm_manager.rel
+engine\content_manager.rel
+engine\font_manager.rel
+engine\input_manager.rel
+engine\player_manager.rel
+engine\screen_manager.rel
+engine\tile_manager.rel
+gfx.rel
+psg.rel
+
+-e
