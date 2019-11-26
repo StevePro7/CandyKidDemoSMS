@@ -20,17 +20,27 @@ void screen_ready_screen_load()
 
 void screen_ready_screen_update( unsigned char *screen_type )
 {
-	unsigned char test;
+	unsigned char input;
 
 	engine_gamer_manager_draw();
 	engine_enemy_manager_draw();
-
 	rand();
-	test = engine_input_manager_hold_fire2();
-	if( test )
+
+	input = engine_input_manager_hold_fire2();
+	if( input )
 	{
 		engine_sound_manager_play();
 	}
+	else
+	{
+		input = engine_input_manager_hold_fire1();
+		if( input )
+		{
+			*screen_type = screen_type_play;
+			return;
+		}
+	}
 
-	*screen_type = screen_type_ready;
+	*screen_type = screen_type_play;
+	//*screen_type = screen_type_ready;		// todo revert!
 }
