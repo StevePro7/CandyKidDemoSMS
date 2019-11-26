@@ -8,8 +8,6 @@ struct_enemy_object global_enemy_objects[ MAX_ENEMIES ];
 static void construcction( unsigned char idx, unsigned char x, unsigned char y, unsigned char delay, unsigned int base );
 static void calculate_tile( unsigned char idx );
 
-
-
 void engine_enemy_manager_load()
 {
 	unsigned char idx;
@@ -17,25 +15,6 @@ void engine_enemy_manager_load()
 	construcction( 0, 160, 144, 75, 16 );
 	construcction( 1, 48, 144, 75, 32 );
 	construcction( 2, 160, 32, 75, 48 );
-
-	/*eo = &global_enemy_objects[ 0 ];
-	eo->enemyX = 160;
-	eo->enemyY = 144;
-	eo->color = 0;
-	eo->base = SPRITE_TILES + 16;
-	eo->frame = 0;
-
-	eo = &global_enemy_objects[ 1 ];
-	eo->enemyX = 48;
-	eo->enemyY = 144;
-	eo->color = 0;
-	eo->base = SPRITE_TILES + 32;
-
-	eo = &global_enemy_objects[ 2 ];
-	eo->enemyX = 160;
-	eo->enemyY = 32;
-	eo->color = 0;
-	eo->base = SPRITE_TILES + 48;*/
 
 	for( idx = 0; idx < MAX_ENEMIES; idx++ )
 	{

@@ -135,6 +135,9 @@
     <ClCompile Include="engine\gamer_manager.c">
       <Filter>Source Files\engine</Filter>
     </ClCompile>
+    <ClCompile Include="engine\enemy_manager.c">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="build.bat">
@@ -228,9 +231,6 @@
     </ClInclude>
     <ClInclude Include="object\gamer_object.h">
       <Filter>Header Files\object</Filter>
-    </ClInclude>
-    <ClInclude Include="engine\enemy_manager.c">
-      <Filter>Source Files\engine</Filter>
     </ClInclude>
     <ClInclude Include="engine\enemy_manager.h">
       <Filter>Header Files\engine</Filter>
