@@ -3,14 +3,12 @@
 
 typedef struct tag_struct_gamer_object
 {
-	unsigned char gamer_id;
-
 	unsigned char kidX;
 	unsigned char kidY;
 	unsigned char velZ;
 	unsigned char kidColor;
 	unsigned char kidFrame;
-	unsigned char kidTile;
+	unsigned int kidTile;
 	unsigned char direction;
 	unsigned char lifecycle;
 

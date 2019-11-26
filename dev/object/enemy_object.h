@@ -3,7 +3,14 @@
 
 typedef struct tag_struct_enemy_object
 {
-	unsigned char enemy_id;
+	unsigned char enemyX;
+	unsigned char enemyY;
+	unsigned char color;
+	unsigned char frame;
+	unsigned char delay;
+	unsigned char timer;
+	unsigned int base;
+	unsigned int tile;
 
 } struct_enemy_object;
 

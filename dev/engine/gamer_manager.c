@@ -24,7 +24,7 @@ void engine_gamer_manager_load()
 	struct_gamer_object *go = &global_gamer_object;
 
 	go->kidColor = 0;
-	go->kidX = 32;
+	go->kidX = 48;
 	go->kidY = 32;
 	go->velZ = 0;
 	go->kidFrame = 0;
