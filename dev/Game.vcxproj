@@ -163,6 +163,8 @@
     <ClCompile Include="game.c" />
     <ClCompile Include="gfx.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="object\enemy_object.c" />
+    <ClCompile Include="object\gamer_object.c" />
     <ClCompile Include="object\hack_object.c" />
     <ClCompile Include="object\path_object.c" />
     <ClCompile Include="psg.c" />
@@ -195,6 +197,8 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="gfx.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="object\enemy_object.h" />
+    <ClInclude Include="object\gamer_object.h" />
     <ClInclude Include="object\hack_object.h" />
     <ClInclude Include="object\path_object.h" />
     <ClInclude Include="psg.h" />

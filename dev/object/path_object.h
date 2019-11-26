@@ -5,7 +5,7 @@
 
 typedef struct tag_struct_path_object
 {
-	unsigned char gamer_route[ GAMER_MAX_PATHS ] [ GAMER_MAX_FRAME ];
+	unsigned char gamer_route[ GAMER_MAX_PATHS ][ GAMER_MAX_FRAME ];
 
 } struct_path_object;
 

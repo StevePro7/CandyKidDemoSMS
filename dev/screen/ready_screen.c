@@ -14,7 +14,7 @@ void screen_ready_screen_load()
 	// todo delete
 	engine_content_manager_load_tiles();
 	engine_content_manager_load_sprites();
-	engine_font_manager_draw_text( "READY", 2, 2 );
+	engine_font_manager_draw_text( "READY STEADY", 2, 12 );
 	// todo delete
 
 	/*engine_text_manager_names();
