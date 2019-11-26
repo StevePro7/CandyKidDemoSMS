@@ -1,0 +1,34 @@
+XL2
+H 9 areas 3 global symbols
+M sprite_manager
+O -mz80
+S .__.ABS. Def0000
+S _devkit_SMS_addSprite Ref0000
+A _CODE size 65 flags 0 addr 0
+S _engine_sprite_manager_draw Def0000
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 00 00
+T 00 00 DD E5 DD 21 00 00 DD 39 DD 66 06 DD 6E 05
+R 00 00 00 00
+T 0E 00 E5 DD 7E 04 F5 33 CD 00 00 F1 33 DD 56 06
+R 00 00 00 00 02 09 01 00
+T 1C 00 14 DD 7E 04 C6 08 47 C5 D5 33 DD 7E 05 F5
+R 00 00 00 00
+T 2A 00 33 C5 33 CD 00 00 F1 33 C1 DD 7E 06 C6 08
+R 00 00 00 00 02 06 01 00
+T 38 00 67 DD 7E 05 C6 08 57 C5 D5 E5 33 D5 33 DD
+R 00 00 00 00
+T 46 00 7E 04 F5 33 CD 00 00 F1 33 D1 C1 DD 7E 06
+R 00 00 00 00 02 07 01 00
+T 54 00 C6 09 67 E5 33 D5 33 C5 33 CD 00 00 F1 33
+R 00 00 00 00 02 0C 01 00
+T 62 00 DD E1 C9
+R 00 00 00 00
