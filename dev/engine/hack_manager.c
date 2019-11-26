@@ -1,6 +1,4 @@
 #include "hack_manager.h"
-//#include "global_manager.h"
-//#include "enum_manager.h"
 
 #define PEEK( addr)			(* ( unsigned char *)( addr ) )
 #define POKE( addr, data )	(* ( unsigned char *)( addr ) = ( data ) )

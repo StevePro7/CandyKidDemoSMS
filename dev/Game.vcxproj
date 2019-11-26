@@ -155,6 +155,7 @@
     <ClCompile Include="engine\input_manager.c" />
     <ClCompile Include="engine\locale_manager.c" />
     <ClCompile Include="engine\path_manager.c" />
+    <ClCompile Include="engine\sound_manager.c" />
     <ClCompile Include="engine\sprite_manager.c" />
     <ClCompile Include="engine\screen_manager.c" />
     <ClCompile Include="engine\text_manager.c" />
@@ -186,6 +187,7 @@
     <ClInclude Include="engine\input_manager.h" />
     <ClInclude Include="engine\locale_manager.h" />
     <ClInclude Include="engine\path_manager.h" />
+    <ClInclude Include="engine\sound_manager.h" />
     <ClInclude Include="engine\sprite_manager.h" />
     <ClInclude Include="engine\screen_manager.h" />
     <ClInclude Include="engine\text_manager.h" />
