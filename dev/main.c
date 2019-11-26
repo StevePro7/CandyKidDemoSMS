@@ -14,8 +14,6 @@ void main( void )
 	devkit_SMS_useFirstHalfTilesforSprites_False();
 	devkit_SMS_VDPturnOnFeature( devkit_VDPFEATURE_HIDEFIRSTCOL() );
 
-	//engine_content_manager_load_tiles();
-	//engine_content_manager_load_sprites();
 
 	//open_screen_type = screen_type_start;
 	open_screen_type = screen_type_title;

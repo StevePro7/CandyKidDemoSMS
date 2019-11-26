@@ -75,9 +75,6 @@
     <ClCompile Include="engine\input_manager.c">
       <Filter>Source Files\engine</Filter>
     </ClCompile>
-    <ClCompile Include="engine\tile_manager.c">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
     <ClCompile Include="engine\player_manager.c">
       <Filter>Source Files\engine</Filter>
     </ClCompile>
@@ -106,6 +103,9 @@
       <Filter>Source Files\screen</Filter>
     </ClCompile>
     <ClCompile Include="engine\locale_manager.c">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\tree_manager.c">
       <Filter>Source Files\engine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -145,9 +145,6 @@
     <ClInclude Include="engine\input_manager.h">
       <Filter>Header Files\engine</Filter>
     </ClInclude>
-    <ClInclude Include="engine\tile_manager.h">
-      <Filter>Header Files\engine</Filter>
-    </ClInclude>
     <ClInclude Include="engine\player_manager.h">
       <Filter>Header Files\engine</Filter>
     </ClInclude>
@@ -176,6 +173,9 @@
       <Filter>Header Files\screen</Filter>
     </ClInclude>
     <ClInclude Include="engine\locale_manager.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\tree_manager.h">
       <Filter>Header Files\engine</Filter>
     </ClInclude>
   </ItemGroup>

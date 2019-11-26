@@ -30,7 +30,7 @@ cd engine
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 input_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 player_manager.c
 sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 screen_manager.c
-::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 tile_manager.c
+sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 tree_manager.c
 cd ..
 
 cd screen
@@ -66,7 +66,7 @@ engine\hack_manager.rel ^
 engine\input_manager.rel ^
 engine\player_manager.rel ^
 engine\screen_manager.rel ^
-engine\tile_manager.rel ^
+engine\tree_manager.rel ^
 screen\none_screen.rel ^
 screen\start_screen.rel ^
 screen\title_screen.rel ^

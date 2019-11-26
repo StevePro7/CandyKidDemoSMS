@@ -3,6 +3,7 @@
 #include "..\engine\asm_manager.h"
 #include "..\engine\content_manager.h"
 #include "..\engine\enum_manager.h"
+#include "..\engine\tree_manager.h"
 
 void screen_title_screen_load()
 {
@@ -10,6 +11,8 @@ void screen_title_screen_load()
 	engine_asm_manager_clear_VRAM();
 	engine_content_manager_load_tiles();
 	engine_content_manager_load_sprites();
+
+	engine_tree_manager_draw();
 	devkit_SMS_displayOn();
 }
 
