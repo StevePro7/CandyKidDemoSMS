@@ -154,6 +154,7 @@
     <ClCompile Include="engine\hack_manager.c" />
     <ClCompile Include="engine\input_manager.c" />
     <ClCompile Include="engine\locale_manager.c" />
+    <ClCompile Include="engine\path_manager.c" />
     <ClCompile Include="engine\sprite_manager.c" />
     <ClCompile Include="engine\screen_manager.c" />
     <ClCompile Include="engine\text_manager.c" />
@@ -162,6 +163,7 @@
     <ClCompile Include="gfx.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="object\hack_object.c" />
+    <ClCompile Include="object\path_object.c" />
     <ClCompile Include="psg.c" />
     <ClCompile Include="screen\none_screen.c" />
     <ClCompile Include="screen\play_screen.c" />
@@ -183,6 +185,7 @@
     <ClInclude Include="engine\hack_manager.h" />
     <ClInclude Include="engine\input_manager.h" />
     <ClInclude Include="engine\locale_manager.h" />
+    <ClInclude Include="engine\path_manager.h" />
     <ClInclude Include="engine\sprite_manager.h" />
     <ClInclude Include="engine\screen_manager.h" />
     <ClInclude Include="engine\text_manager.h" />
@@ -191,6 +194,7 @@
     <ClInclude Include="gfx.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="object\hack_object.h" />
+    <ClInclude Include="object\path_object.h" />
     <ClInclude Include="psg.h" />
     <ClInclude Include="screen\none_screen.h" />
     <ClInclude Include="screen\play_screen.h" />
