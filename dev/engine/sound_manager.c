@@ -10,6 +10,17 @@
 #define SOUND3_PSG			sound3_psg
 #define SOUNDS_MAX			3
 
+void engine_music_manager_play()
+{
+	struct_hack_object *ho = &global_hack_object;
+	if( !ho->hack_music )
+	{
+		return;
+	}
+
+	devkit_PSGPlayNoRepeat( ( unsigned char* ) MUSIC_PSG );
+}
+
 void engine_sound_manager_play()
 {
 	struct_hack_object *ho = &global_hack_object;
