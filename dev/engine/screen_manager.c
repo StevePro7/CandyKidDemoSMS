@@ -6,6 +6,8 @@
 #include "..\screen\none_screen.h"
 #include "..\screen\start_screen.h"
 #include "..\screen\title_screen.h"
+#include "..\screen\ready_screen.h"
+#include "..\screen\play_screen.h"
 
 static void( *load_method[ MAX_SCREEENS ] )();
 static void( *update_method[ MAX_SCREEENS ] )( unsigned char *screen_type );
@@ -22,11 +24,15 @@ void engine_screen_manager_init( unsigned char open_screen_type )
 	load_method[ screen_type_none ] = screen_none_screen_load;
 	load_method[ screen_type_start ] = screen_start_screen_load;
 	load_method[ screen_type_title ] = screen_title_screen_load;
+	load_method[screen_type_ready ] = screen_ready_screen_load;
+	load_method[screen_type_play ] = screen_play_screen_load;
 
 	// Set update methods.
 	update_method[ screen_type_none ] = screen_none_screen_update;
 	update_method[ screen_type_start ] = screen_start_screen_update;
 	update_method[ screen_type_title ] = screen_title_screen_update;
+	update_method[ screen_type_ready ] = screen_ready_screen_update;
+	update_method[ screen_type_play ] = screen_play_screen_update;
 }
 
 void engine_screen_manager_update()
