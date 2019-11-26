@@ -5,16 +5,17 @@
 // Global variables.
 struct_enemy_object global_enemy_objects[ MAX_ENEMIES ];
 
-static void construcction( unsigned char idx, unsigned char x, unsigned char y, unsigned char delay, unsigned int base );
+static void construction( unsigned char idx, unsigned char x, unsigned char y, unsigned char delay, unsigned int base );
 static void calculate_tile( unsigned char idx );
 
+// todo delay is currently hard coded at 75!
 void engine_enemy_manager_load()
 {
 	unsigned char idx;
 
-	construcction( 0, 160, 144, 75, 16 );
-	construcction( 1, 48, 144, 75, 32 );
-	construcction( 2, 160, 32, 75, 48 );
+	construction( 0, 160, 144, 75, 16 );
+	construction( 1, 48, 144, 75, 32 );
+	construction( 2, 160, 32, 75, 48 );
 
 	for( idx = 0; idx < MAX_ENEMIES; idx++ )
 	{
@@ -34,7 +35,7 @@ void engine_enemy_manager_draw()
 	}
 }
 
-static void construcction( unsigned char idx, unsigned char x, unsigned char y, unsigned char delay, unsigned int base )
+static void construction( unsigned char idx, unsigned char x, unsigned char y, unsigned char delay, unsigned int base )
 {
 	struct_enemy_object *eo = &global_enemy_objects[ idx ];
 
