@@ -24,9 +24,29 @@ void main( void )
 	engine_screen_manager_init( open_screen_type );
 
 	devkit_SMS_displayOn();
-
 	for( ;; )
 	{
+		if( devkit_SMS_queryPauseRequested() )
+		{
+			devkit_SMS_resetPauseRequest();
+			global_pause = !global_pause;
+			if( global_pause )
+			{
+				engine_font_manager_draw_text( LOCALE_PAUSED, 10, 12 );
+				devkit_PSGSilenceChannels();
+			}
+			else
+			{
+				engine_font_manager_draw_text( LOCALE_TITLE2, 10, 12 );
+				devkit_PSGRestoreVolumes();
+			}
+		}
+
+		if( global_pause )
+		{
+			continue;
+		}
+
 		devkit_SMS_initSprites();
 		engine_input_manager_update();
 		engine_screen_manager_update();
