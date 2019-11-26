@@ -7,7 +7,9 @@
 #include "..\engine\font_manager.h"
 #include "..\engine\gamer_manager.h"
 #include "..\engine\input_manager.h"
+#include "..\engine\sound_manager.h"
 #include "..\engine\text_manager.h"
+#include <stdlib.h>
 
 void screen_ready_screen_load()
 {
@@ -18,8 +20,17 @@ void screen_ready_screen_load()
 
 void screen_ready_screen_update( unsigned char *screen_type )
 {
+	unsigned char test;
+
 	engine_gamer_manager_draw();
 	engine_enemy_manager_draw();
+
+	rand();
+	test = engine_input_manager_hold_fire2();
+	if( test )
+	{
+		engine_sound_manager_play();
+	}
 
 	*screen_type = screen_type_ready;
 }
