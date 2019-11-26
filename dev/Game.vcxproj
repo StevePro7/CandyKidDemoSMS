@@ -156,6 +156,7 @@
     <ClCompile Include="engine\locale_manager.c" />
     <ClCompile Include="engine\player_manager.c" />
     <ClCompile Include="engine\screen_manager.c" />
+    <ClCompile Include="engine\text_manager.c" />
     <ClCompile Include="engine\tree_manager.c" />
     <ClCompile Include="game.c" />
     <ClCompile Include="gfx.c" />
@@ -182,6 +183,7 @@
     <ClInclude Include="engine\locale_manager.h" />
     <ClInclude Include="engine\player_manager.h" />
     <ClInclude Include="engine\screen_manager.h" />
+    <ClInclude Include="engine\text_manager.h" />
     <ClInclude Include="engine\tree_manager.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="gfx.h" />
