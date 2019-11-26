@@ -6,30 +6,30 @@ void engine_text_manager_draw()
 {
 	unsigned char move;
 
-	engine_font_manager_draw_text( LOCALE_TITLE1, 8, 11 );
-	engine_font_manager_draw_text( LOCALE_TITLE2, 8, 12 );
+	engine_font_manager_draw_text( LOCALE_TITLE1, 9, 11 );
+	engine_font_manager_draw_text( LOCALE_TITLE2, 9, 12 );
 
-	engine_font_manager_draw_text( LOCALE_SIDE1, 24, 0 );
-	engine_font_manager_draw_text( LOCALE_SIDE2, 24, 1 );
+	engine_font_manager_draw_text( LOCALE_SIDE1, 25, 0 );
+	engine_font_manager_draw_text( LOCALE_SIDE2, 25, 1 );
 
 	move = 4;
-	engine_font_manager_draw_text( LOCALE_MOVE0, 24, move + 0 );
-	engine_font_manager_draw_text( LOCALE_MOVE1, 24, move + 1 );
-	engine_font_manager_draw_text( LOCALE_MOVE2, 24, move + 2 );
-	engine_font_manager_draw_text( LOCALE_MOVE3, 24, move + 3 );
-	engine_font_manager_draw_text( LOCALE_MOVE4, 24, move + 4 );
-	engine_font_manager_draw_text( LOCALE_MOVE5, 24, move + 5 );
+	engine_font_manager_draw_text( LOCALE_MOVE0, 25, move + 0 );
+	engine_font_manager_draw_text( LOCALE_MOVE1, 25, move + 1 );
+	engine_font_manager_draw_text( LOCALE_MOVE2, 25, move + 2 );
+	engine_font_manager_draw_text( LOCALE_MOVE3, 25, move + 3 );
+	engine_font_manager_draw_text( LOCALE_MOVE4, 25, move + 4 );
+	engine_font_manager_draw_text( LOCALE_MOVE5, 25, move + 5 );
 
 	move += 4;
-	engine_font_manager_draw_text( LOCALE_MOVE6, 24, move + 6 );
-	engine_font_manager_draw_text( LOCALE_MOVE7, 24, move + 7 );
+	engine_font_manager_draw_text( LOCALE_MOVE6, 25, move + 6 );
+	engine_font_manager_draw_text( LOCALE_MOVE7, 25, move + 7 );
 
 	move++;
-	engine_font_manager_draw_text( LOCALE_MOVE8, 24, move + 8 );
-	engine_font_manager_draw_text( LOCALE_MOVE9, 24, move + 9 );
+	engine_font_manager_draw_text( LOCALE_MOVE8, 25, move + 8 );
+	engine_font_manager_draw_text( LOCALE_MOVE9, 25, move + 9 );
 
-	engine_font_manager_draw_text( LOCALE_STEVEPRO1, 24, 22 );
-	engine_font_manager_draw_text( LOCALE_STEVEPRO2, 24, 23 );
+	//engine_font_manager_draw_text( LOCALE_STEVEPRO1, 25, 22 );
+	//engine_font_manager_draw_text( LOCALE_STEVEPRO2, 25, 23 );
 }
 
 void engine_text_manager_names()
