@@ -16,6 +16,10 @@ void screen_ready_screen_load()
 	engine_content_manager_load_sprites();
 	engine_font_manager_draw_text( "READY", 2, 2 );
 	// todo delete
+
+	/*engine_text_manager_names();
+	engine_gamer_manager_load();
+	engine_enemy_manager_load();*/
 }
 
 void screen_ready_screen_update( unsigned char *screen_type )

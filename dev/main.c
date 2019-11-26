@@ -18,7 +18,7 @@ void main( void )
 	//open_screen_type = screen_type_start;
 	//open_screen_type = screen_type_title;
 	open_screen_type = screen_type_ready;
-	open_screen_type = screen_type_play;
+	//open_screen_type = screen_type_play;
 	engine_screen_manager_init( open_screen_type );
 
 
