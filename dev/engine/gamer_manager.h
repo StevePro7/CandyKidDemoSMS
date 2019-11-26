@@ -5,6 +5,11 @@
 
 void engine_gamer_manager_init();
 void engine_gamer_manager_load();
+void engine_gamer_manager_toggle_color();
+void engine_gamer_manager_toggle_frame();
+void engine_gamer_manager_move();
+void engine_gamer_manager_update();
+void engine_gamer_manager_draw();
 
 // Global variable.
 extern struct_gamer_object global_gamer_object;

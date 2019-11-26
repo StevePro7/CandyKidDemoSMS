@@ -1,6 +1,7 @@
 #include "gamer_manager.h"
 #include "enum_manager.h"
 #include "global_manager.h"
+#include "sprite_manager.h"
 
 // Global variable.
 struct_gamer_object global_gamer_object;
@@ -30,6 +31,32 @@ void engine_gamer_manager_load()
 	kid_calculate_tile();
 	go->direction = direction_none;
 	go->lifecycle = lifecycle_idle;
+}
+
+void engine_gamer_manager_toggle_color()
+{
+
+}
+
+void engine_gamer_manager_toggle_frame()
+{
+
+}
+
+void engine_gamer_manager_move()
+{
+
+}
+
+void engine_gamer_manager_update()
+{
+
+}
+
+void engine_gamer_manager_draw()
+{
+	struct_gamer_object *go = &global_gamer_object;
+	engine_sprite_manager_draw( go->kidX, go->kidY, go->kidTile );
 }
 
 static void kid_calculate_tile()
