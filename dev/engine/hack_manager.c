@@ -42,6 +42,6 @@ void engine_hack_manager_invert()
 
 	ho->hack_start = !ho->hack_start;
 	ho->hack_hands = !ho->hack_hands;
-	ho->hack_music = !ho->hack_music;
+	//ho->hack_music = !ho->hack_music;		// todo revert!!
 	ho->hack_sound = !ho->hack_sound;
 }
