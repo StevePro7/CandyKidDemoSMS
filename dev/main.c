@@ -17,8 +17,8 @@ void main( void )
 	engine_hack_manager_init();
 	engine_hack_manager_update();
 
-	//open_screen_type = screen_type_start;
-	open_screen_type = screen_type_title;
+	open_screen_type = screen_type_start;
+	//open_screen_type = screen_type_title;
 	//open_screen_type = screen_type_ready;
 	//open_screen_type = screen_type_play;
 	engine_screen_manager_init( open_screen_type );

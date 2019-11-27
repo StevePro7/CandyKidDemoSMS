@@ -43,8 +43,8 @@ void engine_hack_manager_update()
 
 	// Invert.
 	ho->hack_start = !ho->hack_start;
-	//ho->hack_hands = !ho->hack_hands;		// todo revert!!
-	//ho->hack_music = !ho->hack_music;		// todo revert!!
+	ho->hack_hands = !ho->hack_hands;
+	ho->hack_music = !ho->hack_music;
 	ho->hack_sound = !ho->hack_sound;
 
 	// Validate.
@@ -83,7 +83,4 @@ void engine_hack_manager_update()
 			ho->hack_paths = GAMER_MAX_PATHS;
 		}
 	}
-
-	ho->hack_paths = 1;
-
 }

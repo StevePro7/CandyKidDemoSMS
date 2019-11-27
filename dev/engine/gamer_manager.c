@@ -15,6 +15,7 @@ void engine_gamer_manager_load()
 {
 	struct_hack_object *ho = &global_hack_object;
 	struct_gamer_object *go = &global_gamer_object;
+	unsigned char pathIndex = 0;
 
 	go->kidColor = 0;
 	go->kidX = 48;
@@ -34,11 +35,13 @@ void engine_gamer_manager_load()
 	else
 	{
 		// Ensure do not repeat path!
-		while( go->pathIndex == go->prevIndex )
+		while( pathIndex == go->prevIndex )
 		{
-			go->pathIndex = rand() % GAMER_MAX_PATHS;
+			// Must store path in local variable.
+			pathIndex = rand() % GAMER_MAX_PATHS;
 		}
 
+		go->pathIndex = pathIndex;
 		go->prevIndex = go->pathIndex;
 	}
 }

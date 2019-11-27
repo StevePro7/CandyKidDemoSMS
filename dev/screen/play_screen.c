@@ -2,9 +2,6 @@
 #include "..\devkit\_sms_manager.h"
 #include "..\devkit\_snd_manager.h"
 #include "..\engine\enum_manager.h"
-
-#include "..\engine\font_manager.h"
-
 #include "..\engine\enemy_manager.h"
 #include "..\engine\gamer_manager.h"
 #include "..\engine\input_manager.h"
@@ -19,10 +16,6 @@ void screen_play_screen_load()
 	unsigned char direction;
 
 	engine_text_manager_space();
-
-	//engine_gamer_manager_load();	// todo delete
-	//engine_enemy_manager_load();	// todo delete
-
 	engine_music_manager_play();
 
 	direction = po->gamer_route[ go->pathIndex ][ go->moveFrame ];
@@ -41,8 +34,6 @@ void screen_play_screen_update( unsigned char *screen_type )
 	engine_gamer_manager_draw();
 	engine_enemy_manager_draw();
 	
-	engine_font_manager_draw_data_ZERO( go->kidY, 10, 10 );
-
 	if( lifecycle_idle == go->lifecycle )
 	{
 		engine_gamer_manager_incmovements();
