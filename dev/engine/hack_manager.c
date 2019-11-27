@@ -84,4 +84,6 @@ void engine_hack_manager_update()
 		}
 	}
 
+	ho->hack_paths = 1;
+
 }

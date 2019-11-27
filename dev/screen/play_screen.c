@@ -16,9 +16,10 @@ void screen_play_screen_load()
 	unsigned char direction;
 
 	engine_text_manager_space();
-	engine_gamer_manager_load();
 
-	engine_enemy_manager_load();
+	//engine_gamer_manager_load();	// todo delete
+	//engine_enemy_manager_load();	// todo delete
+
 	engine_music_manager_play();
 
 	direction = po->gamer_route[ go->pathIndex ][ go->moveFrame ];

@@ -4,6 +4,7 @@
 #include "..\engine\content_manager.h"
 #include "..\engine\enum_manager.h"
 #include "..\engine\input_manager.h"
+#include "..\engine\path_manager.h"
 #include "..\engine\text_manager.h"
 #include "..\engine\tree_manager.h"
 
@@ -17,6 +18,8 @@ void screen_title_screen_load()
 	engine_tree_manager_draw();
 	engine_text_manager_draw();
 	devkit_SMS_displayOn();
+
+	engine_path_manager_init();
 }
 
 void screen_title_screen_update( unsigned char *screen_type )
