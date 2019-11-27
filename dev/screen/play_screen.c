@@ -25,6 +25,7 @@ void screen_play_screen_update( unsigned char *screen_type )
 	engine_gamer_manager_draw();
 	engine_enemy_manager_draw();
 
+	engine_enemy_manager_toggle();
 	input = engine_input_manager_hold_fire2();
 	if( input )
 	{

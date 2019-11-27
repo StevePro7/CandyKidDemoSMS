@@ -3,6 +3,7 @@
 
 typedef struct tag_struct_enemy_object
 {
+	unsigned char index;
 	unsigned char enemyX;
 	unsigned char enemyY;
 	unsigned char color;

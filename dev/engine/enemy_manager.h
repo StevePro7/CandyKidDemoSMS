@@ -5,6 +5,7 @@
 #define MAX_ENEMIES				3
 
 void engine_enemy_manager_load();
+void engine_enemy_manager_toggle();
 void engine_enemy_manager_draw();
 
 // Global variables.

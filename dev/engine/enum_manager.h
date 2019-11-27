@@ -28,4 +28,12 @@ typedef enum tag_enum_lifecycle_type
 
 } enum_lifecycle_type;
 
+typedef enum tag_enum_enemy_type
+{
+	enemy_pro = 0,
+	enemy_adi = 1,
+	enemy_suz = 2,
+
+} enum_enemy_type;
+
 #endif//_ENUM_MANAGER_H_
