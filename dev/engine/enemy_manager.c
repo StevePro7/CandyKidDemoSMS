@@ -26,7 +26,7 @@ void engine_enemy_manager_load()
 	}
 }
 
-void engine_enemy_manager_toggle()
+void engine_enemy_manager_toggle_color()
 {
 	unsigned char input = engine_input_manager_hold_right();
 	if( input )

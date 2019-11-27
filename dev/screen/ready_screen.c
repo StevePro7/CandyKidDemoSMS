@@ -28,7 +28,8 @@ void screen_ready_screen_update( unsigned char *screen_type )
 	engine_enemy_manager_draw();
 
 	rand();
-	engine_enemy_manager_toggle();
+	engine_gamer_manager_toggle_color();
+	engine_enemy_manager_toggle_color();
 
 	input = engine_input_manager_hold_fire2();
 	if( input )

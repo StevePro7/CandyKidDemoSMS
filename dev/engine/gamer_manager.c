@@ -1,6 +1,7 @@
 #include "gamer_manager.h"
 #include "enum_manager.h"
 #include "global_manager.h"
+#include "input_manager.h"
 #include "sprite_manager.h"
 
 // Global variable.
@@ -35,7 +36,16 @@ void engine_gamer_manager_load()
 
 void engine_gamer_manager_toggle_color()
 {
+	struct_gamer_object *go = &global_gamer_object;
 
+	unsigned char input = engine_input_manager_hold_up();
+	if( !input )
+	{
+		return;
+	}
+
+	go->kidColor = ( 1 - go->kidColor );
+	kid_calculate_tile();
 }
 
 void engine_gamer_manager_toggle_frame()
