@@ -1,4 +1,5 @@
 #include "hack_manager.h"
+#include "global_manager.h"
 
 #define PEEK( addr)			(* ( unsigned char *)( addr ) )
 #define POKE( addr, data )	(* ( unsigned char *)( addr ) = ( data ) )
@@ -36,12 +37,51 @@ void engine_hack_manager_init()
 
 }
 
-void engine_hack_manager_invert()
+void engine_hack_manager_update()
 {
 	struct_hack_object *ho = &global_hack_object;
 
+	// Invert.
 	ho->hack_start = !ho->hack_start;
 	//ho->hack_hands = !ho->hack_hands;		// todo revert!!
 	//ho->hack_music = !ho->hack_music;		// todo revert!!
 	ho->hack_sound = !ho->hack_sound;
+
+	// Validate.
+	if( ho->hack_steps >= GAMER_MAX_STEPS )
+	{
+		ho->hack_steps = GAMER_MAX_STEPS;
+	}
+	else if( ho->hack_steps >= 4 )
+	{
+		ho->hack_steps = 4;
+	}
+	else if( ho->hack_steps >= 2 )
+	{
+		ho->hack_steps = 2;
+	}
+	else if( 0 == ho->hack_steps )
+	{
+		ho->hack_steps = GAMER_STD_STEPS;
+	}
+
+	// Hacker enemy delay.
+	if( 0 == ho->hack_delay )
+	{
+		ho->hack_delay = ENEMY_STD_DELAY;
+	}
+	if( ho->hack_delay < ENEMY_MIN_DELAY )
+	{
+		ho->hack_delay = ENEMY_MIN_DELAY;
+	}
+
+	// Hacker paths.
+	if( 0 != ho->hack_paths )
+	{
+		if( ho->hack_paths > GAMER_MAX_PATHS )
+		{
+			ho->hack_paths = GAMER_MAX_PATHS;
+		}
+	}
+
 }

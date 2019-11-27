@@ -3,7 +3,6 @@
 
 #include "..\object\gamer_object.h"
 
-void engine_gamer_manager_init();
 void engine_gamer_manager_load();
 void engine_gamer_manager_toggle_color();
 void engine_gamer_manager_toggle_frame();

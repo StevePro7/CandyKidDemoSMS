@@ -6,6 +6,7 @@ typedef struct tag_struct_gamer_object
 	unsigned char kidX;
 	unsigned char kidY;
 	unsigned char velZ;
+	unsigned char steps;
 	unsigned char kidColor;
 	unsigned char kidFrame;
 	unsigned int kidTile;

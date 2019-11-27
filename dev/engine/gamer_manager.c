@@ -1,5 +1,6 @@
 #include "gamer_manager.h"
 #include "enum_manager.h"
+#include "hack_manager.h"
 #include "global_manager.h"
 #include "input_manager.h"
 #include "sprite_manager.h"
@@ -9,25 +10,16 @@ struct_gamer_object global_gamer_object;
 
 static void kid_calculate_tile();
 
-// todo do I need this func?
-void engine_gamer_manager_init()
-{
-	struct_gamer_object *go = &global_gamer_object;
-
-	go->kidColor = 0;
-	//go->pathIndex = 0;
-	//go->prevIndex = 0;
-	//go->moveFrame = 0;
-}
-
 void engine_gamer_manager_load()
 {
+	struct_hack_object *ho = &global_hack_object;
 	struct_gamer_object *go = &global_gamer_object;
 
 	go->kidColor = 0;
 	go->kidX = 48;
 	go->kidY = 32;
 	go->velZ = 0;
+	go->steps = ho->hack_steps;
 	go->kidFrame = 0;
 	kid_calculate_tile();
 	go->direction = direction_none;
