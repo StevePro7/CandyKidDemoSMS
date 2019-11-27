@@ -138,6 +138,9 @@
     <ClCompile Include="engine\enemy_manager.c">
       <Filter>Source Files\engine</Filter>
     </ClCompile>
+    <ClCompile Include="engine\route_manager.c">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="build.bat">
@@ -236,6 +239,9 @@
       <Filter>Header Files\engine</Filter>
     </ClInclude>
     <ClInclude Include="engine\gamer_manager.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\route_manager.h">
       <Filter>Header Files\engine</Filter>
     </ClInclude>
   </ItemGroup>
