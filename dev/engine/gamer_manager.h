@@ -6,7 +6,9 @@
 void engine_gamer_manager_load();
 void engine_gamer_manager_toggle_color();
 void engine_gamer_manager_toggle_frame();
-void engine_gamer_manager_move();
+void engine_gamer_manager_setdirection( unsigned char direction );
+void engine_gamer_manager_incmovements();
+void engine_gamer_manager_setlifecycle();
 void engine_gamer_manager_update();
 void engine_gamer_manager_draw();
 

@@ -64,7 +64,19 @@ void engine_gamer_manager_toggle_frame()
 	kid_calculate_tile();
 }
 
-void engine_gamer_manager_move()
+void engine_gamer_manager_setdirection( unsigned char direction )
+{
+	struct_gamer_object *go = &global_gamer_object;
+	go->direction = direction;
+}
+
+void engine_gamer_manager_incmovements()
+{
+	struct_gamer_object *go = &global_gamer_object;
+	go->moveFrame++;
+}
+
+void engine_gamer_manager_setlifecycle()
 {
 	struct_gamer_object *go = &global_gamer_object;
 	go->lifecycle = lifecycle_move;
@@ -73,7 +85,37 @@ void engine_gamer_manager_move()
 
 void engine_gamer_manager_update()
 {
+	struct_gamer_object *go = &global_gamer_object;
+	go->velZ += go->steps;
+	if( go->velZ > GAMER_MAX_STEPS )
+	{
+		go->velZ = 0;
+		if( 1 == go->kidFrame )
+		{
+			engine_gamer_manager_toggle_frame();
+		}
+		else
+		{
+			go->lifecycle = lifecycle_idle;
+		}
+	}
 
+	if( direction_up == go->direction )
+	{
+		go->kidY -= go->steps;
+	}
+	else if( direction_down == go->direction )
+	{
+		go->kidY += go->steps;
+	}
+	else if( direction_left == go->direction )
+	{
+		go->kidX -= go->steps;
+	}
+	else if( direction_right == go->direction )
+	{
+		go->kidX += go->steps;
+	}
 }
 
 void engine_gamer_manager_draw()

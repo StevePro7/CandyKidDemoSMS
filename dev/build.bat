@@ -25,14 +25,14 @@ set /a _started=_hours*60*60*100+_min*60*100+_sec*100+_cs
 cd engine
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 asm_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 content_manager.c
-sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 enemy_manager.c
+::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 enemy_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 font_manager.c
 sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 hack_manager.c
 sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 gamer_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 input_manager.c
-sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 path_manager.c
+::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 path_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 screen_manager.c
-sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 sound_manager.c
+::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 sound_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 sprite_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 text_manager.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 tree_manager.c
@@ -41,7 +41,7 @@ cd ..
 cd screen
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 none_screen.c
 ::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 start_screen.c
-::sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 title_screen.c
+sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 title_screen.c
 sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 ready_screen.c
 sdcc -c -mz80 --opt-code-speed --peep-file ..\peep-rules.txt --std-c99 play_screen.c
 cd ..
