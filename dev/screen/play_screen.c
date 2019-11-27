@@ -3,7 +3,6 @@
 #include "..\devkit\_snd_manager.h"
 #include "..\engine\enum_manager.h"
 #include "..\engine\enemy_manager.h"
-#include "..\engine\font_manager.h"		// todo delete!!
 #include "..\engine\gamer_manager.h"
 #include "..\engine\input_manager.h"
 #include "..\engine\sound_manager.h"
@@ -24,8 +23,11 @@ void screen_play_screen_update( unsigned char *screen_type )
 
 	engine_gamer_manager_draw();
 	engine_enemy_manager_draw();
-
+	
+	engine_gamer_manager_toggle_color();
 	engine_enemy_manager_toggle_color();
+	engine_enemy_manager_toggle_frame();
+
 	input = engine_input_manager_hold_fire2();
 	if( input )
 	{

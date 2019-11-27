@@ -1,5 +1,6 @@
 #include "enemy_manager.h"
 #include "enum_manager.h"
+#include "hack_manager.h"
 #include "input_manager.h"
 #include "global_manager.h"
 #include "sprite_manager.h"
@@ -9,6 +10,7 @@ struct_enemy_object global_enemy_objects[ MAX_ENEMIES ];
 
 static void construction( unsigned char idx, unsigned char x, unsigned char y, unsigned char delay, unsigned int base );
 static void toggle_color( unsigned char idx );
+static void toggle_frame( unsigned char idx );
 static void calculate_tile( unsigned char idx );
 
 // todo delay is currently hard coded at 75!
@@ -45,6 +47,30 @@ void engine_enemy_manager_toggle_color()
 	}
 }
 
+void engine_enemy_manager_toggle_frame()
+{
+	struct_hack_object *ho = &global_hack_object;
+	struct_enemy_object *eo;
+	unsigned char idx;
+
+	if( !ho->hack_hands )
+	{
+		return;
+	}
+
+	for( idx = 0; idx < MAX_ENEMIES; idx++ )
+	{
+		eo = &global_enemy_objects[ idx ];
+		eo->timer++;
+
+		if( eo->timer > eo->delay )
+		{
+			eo->timer = 0;
+			toggle_frame( idx );
+		}
+	}
+}
+
 void engine_enemy_manager_draw()
 {
 	struct_enemy_object *eo;
@@ -77,7 +103,12 @@ static void toggle_color( unsigned char idx )
 	eo->color = ( 1 - eo->color );
 	calculate_tile( idx );
 }
-
+static void toggle_frame( unsigned char idx )
+{
+	struct_enemy_object *eo = &global_enemy_objects[ idx ];
+	eo->frame = ( 1 - eo->frame );
+	calculate_tile( idx );
+}
 static void calculate_tile( unsigned char idx )
 {
 	struct_enemy_object *eo = &global_enemy_objects[ idx ];

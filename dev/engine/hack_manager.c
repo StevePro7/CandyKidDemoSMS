@@ -41,7 +41,7 @@ void engine_hack_manager_invert()
 	struct_hack_object *ho = &global_hack_object;
 
 	ho->hack_start = !ho->hack_start;
-	ho->hack_hands = !ho->hack_hands;
+	//ho->hack_hands = !ho->hack_hands;		// todo revert!!
 	//ho->hack_music = !ho->hack_music;		// todo revert!!
 	ho->hack_sound = !ho->hack_sound;
 }

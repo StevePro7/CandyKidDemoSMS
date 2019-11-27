@@ -6,6 +6,7 @@
 
 void engine_enemy_manager_load();
 void engine_enemy_manager_toggle_color();
+void engine_enemy_manager_toggle_frame();
 void engine_enemy_manager_draw();
 
 // Global variables.
