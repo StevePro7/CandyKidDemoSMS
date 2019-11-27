@@ -16,11 +16,13 @@ static void calculate_tile( unsigned char idx );
 // todo delay is currently hard coded at 75!
 void engine_enemy_manager_load()
 {
+	struct_hack_object *ho = &global_hack_object;
+	unsigned char delay = ho->hack_delay;
 	unsigned char idx;
 
-	construction( enemy_pro, 160, 144, 75, 16 );
-	construction( enemy_adi, 48, 144, 75, 32 );
-	construction( enemy_suz, 160, 32, 75, 48 );
+	construction( enemy_pro, 160, 144, delay, 16 );
+	construction( enemy_adi, 48, 144, delay, 32 );
+	construction( enemy_suz, 160, 32, delay, 48 );
 
 	for( idx = 0; idx < MAX_ENEMIES; idx++ )
 	{
