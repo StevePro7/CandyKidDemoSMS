@@ -28,8 +28,6 @@ void screen_play_screen_load()
 	direction = po->gamer_route[ go->pathIndex ][ go->moveFrame ];
 	engine_gamer_manager_setdirection( direction );
 	engine_gamer_manager_setlifecycle();
-
-	
 }
 
 void screen_play_screen_update( unsigned char *screen_type )
@@ -43,7 +41,7 @@ void screen_play_screen_update( unsigned char *screen_type )
 	engine_gamer_manager_draw();
 	engine_enemy_manager_draw();
 	
-	engine_font_manager_draw_data_ZERO( go->moveFrame, 10, 10 );
+	engine_font_manager_draw_data_ZERO( go->kidY, 10, 10 );
 
 	if( lifecycle_idle == go->lifecycle )
 	{

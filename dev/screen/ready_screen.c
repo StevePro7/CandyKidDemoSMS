@@ -43,6 +43,6 @@ void screen_ready_screen_update( unsigned char *screen_type )
 		return;
 	}
 
-	//*screen_type = screen_type_play;
-	*screen_type = screen_type_ready;		// todo revert!
+	*screen_type = screen_type_play;
+	//*screen_type = screen_type_ready;		// todo revert!
 }

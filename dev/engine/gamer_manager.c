@@ -87,7 +87,7 @@ void engine_gamer_manager_update()
 {
 	struct_gamer_object *go = &global_gamer_object;
 	go->velZ += go->steps;
-	if( go->velZ > GAMER_MAX_STEPS )
+	if( go->velZ >= GAMER_MAX_STEPS )
 	{
 		go->velZ = 0;
 		if( 1 == go->kidFrame )
