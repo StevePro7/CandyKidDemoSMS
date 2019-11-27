@@ -4,6 +4,7 @@
 #include "global_manager.h"
 #include "input_manager.h"
 #include "sprite_manager.h"
+#include <stdlib.h>
 
 // Global variable.
 struct_gamer_object global_gamer_object;
@@ -24,6 +25,22 @@ void engine_gamer_manager_load()
 	kid_calculate_tile();
 	go->direction = direction_none;
 	go->lifecycle = lifecycle_idle;
+
+	go->moveFrame = 0;
+	if( ho->hack_paths )
+	{
+		go->pathIndex = ho->hack_paths - 1;
+	}
+	else
+	{
+		// Ensure do not repeat path!
+		while( go->pathIndex == go->prevIndex )
+		{
+			go->pathIndex = rand() % GAMER_MAX_PATHS;
+		}
+
+		go->prevIndex = go->pathIndex;
+	}
 }
 
 void engine_gamer_manager_toggle_color()
@@ -42,12 +59,16 @@ void engine_gamer_manager_toggle_color()
 
 void engine_gamer_manager_toggle_frame()
 {
-
+	struct_gamer_object *go = &global_gamer_object;
+	go->kidFrame = ( 1 - go->kidFrame );
+	kid_calculate_tile();
 }
 
 void engine_gamer_manager_move()
 {
-
+	struct_gamer_object *go = &global_gamer_object;
+	go->lifecycle = lifecycle_move;
+	engine_gamer_manager_toggle_frame();
 }
 
 void engine_gamer_manager_update()

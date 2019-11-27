@@ -12,6 +12,9 @@ typedef struct tag_struct_gamer_object
 	unsigned int kidTile;
 	unsigned char direction;
 	unsigned char lifecycle;
+	unsigned char moveFrame;
+	unsigned char pathIndex;
+	unsigned char prevIndex;
 
 } struct_gamer_object;
 
