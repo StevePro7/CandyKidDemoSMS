@@ -7,7 +7,7 @@ bmp2tile.exe raw\tree_avoid.bmp -savetiles "tree_avoid (tiles).psgcompr" -noremo
 bmp2tile.exe raw\splash.bmp -savetiles "splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 128 -savetilemap "splash (tilemap).stmcompr" -savepalette "splash (palette).bin" -fullpalette -exit
 
 :: Sprites
-bmp2tile.exe raw\sprites.bmp -savetiles "sprites (tiles).psgcompr" -noremovedupes -planar -tileoffset 256 -savepalette "sprites (palette).bin" -fullpalette  -spritepalette -exit
+bmp2tile.exe raw\sprites.bmp -savetiles "sprites (tiles).psgcompr" -noremovedupes -planar -tileoffset 256 -savepalette "sprites (palette).bin" -fullpalette -spritepalette -exit
 
 cd ..
 cd dev

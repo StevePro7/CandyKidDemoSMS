@@ -9,6 +9,8 @@
 #include "..\screen\ready_screen.h"
 #include "..\screen\play_screen.h"
 
+#define MAX_SCREEENS		5
+
 static void( *load_method[ MAX_SCREEENS ] )();
 static void( *update_method[ MAX_SCREEENS ] )( unsigned char *screen_type );
 
