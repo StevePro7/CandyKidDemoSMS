@@ -6,6 +6,10 @@ void devkit_SMS_displayOn();
 void devkit_SMS_displayOff();
 void devkit_SMS_mapROMBank( unsigned char n );
 
+void devkit_SMS_enableSRAM();
+void devkit_SMS_enableSRAMBank( unsigned char n );
+void devkit_SMS_disableSRAM();
+
 void devkit_SMS_setSpriteMode( unsigned char mode );
 void devkit_SMS_useFirstHalfTilesforSprites_False();
 void devkit_SMS_useFirstHalfTilesforSprites_True();
@@ -21,9 +25,9 @@ void devkit_SMS_setSpritePaletteColor( const unsigned char entry, const unsigned
 void devkit_SMS_setNextTileatXY( unsigned char x, unsigned char y );
 void devkit_SMS_setTile( const unsigned char tile );
 
-void devkit_SMS_addSprite( unsigned char x, unsigned char y, unsigned char tile );
-void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, unsigned char tile );
-void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, unsigned char tile );
+void devkit_SMS_addSprite( unsigned char x, unsigned char y, int tile );
+void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, int tile );
+void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, int tile );
 
 void devkit_SMS_initSprites();
 void devkit_SMS_finalizeSprites();
@@ -33,6 +37,9 @@ void devkit_UNSAFE_SMS_copySpritestoSAT();
 
 unsigned char devkit_SMS_queryPauseRequested();
 void devkit_SMS_resetPauseRequest();
+
+// collision
+unsigned char devkit_isCollisionDetected();
 
 // input
 unsigned int devkit_SMS_getKeysStatus();

@@ -1,5 +1,6 @@
 #include "_sms_manager.h"
 #include "..\game.h"
+
 #include <stdbool.h>
 
 #ifdef _CONSOLE
@@ -24,6 +25,20 @@ void devkit_SMS_mapROMBank( unsigned char n )
 {
 	SMS_mapROMBank( n );
 }
+
+void devkit_SMS_enableSRAM()
+{
+	SMS_enableSRAM();
+}
+void devkit_SMS_enableSRAMBank( unsigned char n )
+{
+	SMS_enableSRAMBank( n );
+}
+void devkit_SMS_disableSRAM()
+{
+	SMS_disableSRAM();
+}
+
 
 void devkit_SMS_setSpriteMode( unsigned char mode )
 {
@@ -74,11 +89,11 @@ void devkit_SMS_setTile( const unsigned char tile )
 	SMS_setTile( tile );
 }
 
-void devkit_SMS_addSprite( unsigned char x, unsigned char y, unsigned char tile )
+void devkit_SMS_addSprite( unsigned char x, unsigned char y, int tile )
 {
 	SMS_addSprite( x, y, tile );
 }
-void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, unsigned char tile )
+void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, int tile )
 {
 	devkit_SMS_addSprite( x + 0, y + 0, tile + 0 );
 	devkit_SMS_addSprite( x + 8, y + 0, tile + 1 );
@@ -92,7 +107,7 @@ void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, unsigned char
 	devkit_SMS_addSprite( x + 0, y + 24, tile + 6 );
 	devkit_SMS_addSprite( x + 8, y + 24, tile + 7 );
 }
-void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, unsigned char tile )
+void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, int tile )
 {
 	SMS_addSprite( x + 0, y + 0, tile + 0 );
 	SMS_addSprite( x + 8, y + 0, tile + 1 );
@@ -139,6 +154,11 @@ unsigned char devkit_SMS_queryPauseRequested()
 void devkit_SMS_resetPauseRequest()
 {
 	SMS_resetPauseRequest();
+}
+
+unsigned char devkit_isCollisionDetected()
+{
+	return ( SMS_VDPFlags & VDPFLAG_SPRITECOLLISION );
 }
 
 // Input.
