@@ -13,7 +13,6 @@ static void toggle_color( unsigned char idx );
 static void toggle_frame( unsigned char idx );
 static void calculate_tile( unsigned char idx );
 
-// todo delay is currently hard coded at 75!
 void engine_enemy_manager_load()
 {
 	struct_hack_object *ho = &global_hack_object;
