@@ -1,6 +1,6 @@
 ;!FILE title_screen.asm
 XL3
-H 9 areas 2A global symbols
+H 9 areas 26 global symbols
 M title_screen
 O -mz80
 S _engine_text_manager_draw Ref000000
@@ -12,37 +12,33 @@ S _engine_content_manager_load_tiles Ref000000
 S _engine_asm_manager_clear_VRAM Ref000000
 S _engine_tree_manager_draw Ref000000
 S _engine_path_manager_init Ref000000
-A _CODE size 1F flags 0 addr 0
+A _CODE size 1B flags 0 addr 0
 S XG$screen_title_screen_load$0$0 Def000015
 S G$screen_title_screen_update$0$0 Def000018
+S A$title_screen$120 Def00001A
 S A$title_screen$112 Def000018
-S A$title_screen$113 Def000019
-S A$title_screen$114 Def00001A
-S A$title_screen$124 Def00001E
-S A$title_screen$115 Def00001B
+S C$title_screen.c$25$1_0$121 Def000018
+S C$title_screen.c$11$0_0$119 Def000000
 S _screen_title_screen_update Def000018
-S A$title_screen$116 Def00001C
-S XG$screen_title_screen_update$0$0 Def00001E
-S C$title_screen.c$11$0_0$16 Def000000
-S C$title_screen.c$20$1_0$16 Def000012
-S C$title_screen.c$22$1_0$16 Def000015
-S C$title_screen.c$13$1_0$16 Def000000
-S C$title_screen.c$23$1_0$16 Def000015
-S C$title_screen.c$14$1_0$16 Def000003
+S C$title_screen.c$27$1_0$121 Def000018
+S C$title_screen.c$20$1_0$119 Def000012
+S C$title_screen.c$28$1_0$121 Def00001A
+S C$title_screen.c$22$1_0$119 Def000015
+S C$title_screen.c$13$1_0$119 Def000000
+S C$title_screen.c$23$1_0$119 Def000015
+S C$title_screen.c$14$1_0$119 Def000003
+S C$title_screen.c$15$1_0$119 Def000006
+S C$title_screen.c$16$1_0$119 Def000009
+S C$title_screen.c$18$1_0$119 Def00000C
+S C$title_screen.c$19$1_0$119 Def00000F
+S XG$screen_title_screen_update$0$0 Def00001A
 S A$title_screen$80 Def00000C
-S C$title_screen.c$15$1_0$16 Def000006
 S G$screen_title_screen_load$0$0 Def000000
 S A$title_screen$72 Def000006
-S C$title_screen.c$16$1_0$16 Def000009
 S A$title_screen$64 Def000000
-S C$title_screen.c$25$1_0$18 Def000018
-S C$title_screen.c$18$1_0$16 Def00000C
 S A$title_screen$84 Def00000F
-S C$title_screen.c$19$1_0$16 Def00000F
 S A$title_screen$76 Def000009
-S C$title_screen.c$27$1_0$18 Def000018
 S A$title_screen$68 Def000003
-S C$title_screen.c$28$1_0$18 Def00001E
 S A$title_screen$88 Def000012
 S A$title_screen$99 Def000015
 S _screen_title_screen_load Def000000
@@ -64,5 +60,5 @@ T 13 00 00 00 00 C3 00 00
 R 00 00 00 00 02 03 01 00 02 06 08 00
 T 18 00 00
 R 00 00 00 00
-T 18 00 00 C1 E1 E5 C5 36 03 C9
+T 18 00 00 36 03 C9
 R 00 00 00 00

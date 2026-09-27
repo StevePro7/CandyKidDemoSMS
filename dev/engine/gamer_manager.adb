@@ -9,7 +9,7 @@ S:Lgamer_manager.engine_gamer_manager_toggle_color$input$1_0$33({1}SC:U),R,0,0,[
 F:G$engine_gamer_manager_toggle_frame$0_0$0({2}DF,SV:S),Z,0,0,0,0,0
 S:Lgamer_manager.engine_gamer_manager_toggle_frame$go$1_0$35({2}DG,STtag_struct_gamer_object:S),R,0,0,[]
 F:G$engine_gamer_manager_setdirection$0_0$0({2}DF,SV:S),Z,0,0,0,0,0
-S:Lgamer_manager.engine_gamer_manager_setdirection$direction$1_0$36({1}SC:U),B,1,4
+S:Lgamer_manager.engine_gamer_manager_setdirection$direction$1_0$0({1}SC:U),R,0,0,[c]
 S:Lgamer_manager.engine_gamer_manager_setdirection$go$1_0$37({2}DG,STtag_struct_gamer_object:S),R,0,0,[]
 F:G$engine_gamer_manager_incmovements$0_0$0({2}DF,SV:S),Z,0,0,0,0,0
 S:Lgamer_manager.engine_gamer_manager_incmovements$go$1_0$38({2}DG,STtag_struct_gamer_object:S),R,0,0,[]

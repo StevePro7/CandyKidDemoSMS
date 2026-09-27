@@ -63,7 +63,7 @@ echo.
 sdcc --debug -o output.ihx --Werror --opt-code-speed -mz80 --no-std-crt0 --data-loc 0xC000 ^
 ..\crt0\crt0_sms.rel main.rel ^
 ..\lib\SMSlib.lib ^
-..\lib\PSGlib.rel ^
+..\lib\PSGlib.lib ^
 devkit\_sms_manager.rel ^
 devkit\_snd_manager.rel ^
 engine\asm_manager.rel ^
@@ -121,5 +121,5 @@ if exist "*.noi" del "*.noi" > nul
 if exist "*.sym" del "*.sym" > nul
 
 :: Run
-::java -jar C:\SEGA\Emulicious\Emulicious.jar output.sms
-output.sms
+java -jar C:\SEGA\Emulicious\Emulicious.jar output.sms
+::output.sms

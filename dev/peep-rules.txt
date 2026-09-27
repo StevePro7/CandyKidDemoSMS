@@ -17,6 +17,16 @@ replace restart {
 } if notVolatile(%1), notUsed(%1), notVolatile(%2)
 
 replace restart {
+	ld	%1, %2
+	di
+	ld	%3, %1
+} by {
+	; peephole rule 1b-with_DI loaded %2 into %3 directly instead of going through %1.
+	ld	%3, %2
+	di
+} if canAssign(%3 %2), notVolatile(%1), notUsed(%1)
+
+replace restart {
 	ld	%1, %2 (%3)
 	di
 	ld	%4, %1
@@ -26,26 +36,16 @@ replace restart {
 	di
 } if canAssign(%4 %2 %3), notVolatile(%1), notUsed(%1)
 
-replace restart {
-	ld	%1, %2
-	ld	%4, %5
-	ld	%3, %1
-} by {
-	; peephole rule 11-with_disturbing_LD_in_between loaded %2 into %3 directly instead of going through %1.
-	ld	%4, %5
-	ld	%3, %2
-} if canAssign(%3 %2), notVolatile(%1), notUsed(%1)
-
 replace {
 	call	_SMS_crt0_RST08
 } by {
-	; peephole rule call_SMS_crt0_RST08
+	; devkitSMS peephole rule #1 replaced 'call_SMS_crt0_RST08' with 'rst #0x08'
 	rst	#0x08
 }
 
 replace {
 	call	_SMS_crt0_RST18
 } by {
-	; peephole rule call_SMS_crt0_RST18
+	; devkitSMS peephole rule #2 replaced 'call_SMS_crt0_RST18' with 'rst #0x18'
 	rst	#0x18
 }
